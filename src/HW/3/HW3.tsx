@@ -16,9 +16,8 @@ export const HW3 = () => {
     'То, что вы делаете по ночам, то и делает вас богатым. (Аль Капоне)',
   ]);
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCurrentText(event.currentTarget.value);
-
   };
 
   const handleSave = () => {
@@ -38,7 +37,7 @@ export const HW3 = () => {
 
       <input id={'hw03-input'} type="text" value={currentText} onChange={handleChange} />
 
-      <button id={'hw03-button'} onClick={(handleSave) => {}}> // НЕ ХВАТАТЕТ ФУНКЦИИ
+      <button id={'hw03-button'} onClick={handleSave}> // НЕ ХВАТАТЕТ ФУНКЦИИ
         Сохранить
       </button>
 
